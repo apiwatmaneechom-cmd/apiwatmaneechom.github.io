@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>สำหรับเธอคนพิเศษ 💖</title>
+<style>
+    body {
+        font-family: 'Prompt', sans-serif;
+        background: linear-gradient(135deg, #ffb6c1, #ffe4e1);
+        text-align: center;
+        padding: 50px;
+    }
+    h1 {
+        color: #ff4d6d;
+        font-size: 2.5em;
+    }
+    button {
+        background-color: #ff4d6d;
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        font-size: 1.2em;
+        border-radius: 25px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #ff1e4d;
+        transform: scale(1.05);
+    }
+    .heart {
+        font-size: 3em;
+        animation: heartbeat 1s infinite;
+    }
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.3); }
+    }
+</style>
+</head>
+<body>
+
+<h1>เธอรู้ไหม... 💌</h1>
+<p id="message">มีบางอย่างที่อยากบอกเธอ</p>
+<div class="heart">❤️</div>
+<br>
+<button onclick="confess()">คลิกดูคำสารภาพ</button>
+
+<script>
+function confess() {
+    const messages = [
+        "เราไม่ได้เก่งคณิต แต่เรารู้ว่าเรา + เธอ = ความสุข 💕",
+        "ถ้าความคิดถึงเป็นดาวบนฟ้า... ตอนนี้ท้องฟ้าคงสว่างทั้งคืน 🌙",
+        "เราอาจไม่ใช่คนที่ดีที่สุด แต่เราอยากเป็นคนที่ดีที่สุดสำหรับเธอ 💖"
+    ];
+    document.getElementById("message").innerText = messages[Math.floor(Math.random() * messages.length)];
+}
+</script>
+
+</body>
+</html>
